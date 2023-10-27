@@ -1,0 +1,31 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  margin-bottom: 12px;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+  max-width: 600px;
+  place-self: center;
+  background-color: rgb(238, 238, 238);
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+
+  & button {
+    max-width: 300px;
+    padding: 10px 122px;
+    font-weight: bold;
+    margin-top: 6px;
+    place-self: center;
+  }
+}

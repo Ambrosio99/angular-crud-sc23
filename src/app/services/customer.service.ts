@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Customer } from '../model/customer';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -7,9 +8,9 @@ import { Customer } from '../model/customer';
 export class CustomerService {
   customers: Customer[] = [];
 
-  constructor() {
+  constructor(private http: HttpClient) {
     const customer: Customer = {
-      id: 1,
+      id: self.crypto.randomUUID(),
       name: 'Carlos',
       email: 'carlos@carlos.com',
       dateOfBirth: new Date('1984-06-18'),
@@ -18,7 +19,7 @@ export class CustomerService {
     this.customers.push(customer);
 
     const customer2: Customer = {
-      id: 2,
+      id: self.crypto.randomUUID(),
       name: 'Bete',
       email: 'bete@bete.com',
       dateOfBirth: new Date('1984-06-30'),
@@ -31,12 +32,36 @@ export class CustomerService {
     return this.customers;
   }
 
-  getById() {}
-  update() {}
+  getById(id: string) {
+    return this.customers.find((customer) => customer.id === id);
+  }
 
-  delete(id: number) {
+  update(customer: Customer): Promise<void> {
+    return new Promise((resolve, reject) => {
+      let searchCustomer = this.getById(customer.id);
+
+      if (searchCustomer) {
+        searchCustomer.name = customer.name;
+        searchCustomer.email = customer.email;
+        searchCustomer.dateOfBirth = customer.dateOfBirth;
+      }
+      resolve();
+    });
+  }
+
+  delete(id: string) {
     this.customers = this.customers.filter((customer) => customer.id !== id);
   }
 
-  create() {}
+  create(customer: Customer) {
+    let uuid = self.crypto.randomUUID();
+
+    customer.id = uuid;
+
+    this.customers.push(customer);
+  }
+
+  getCatFacts() {
+    return this.http.get('https://cat-fact.herokuapp.com/facts');
+  }
 }

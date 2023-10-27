@@ -8,7 +8,7 @@ describe('CustomerEditComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CustomerEditComponent]
+      declarations: [CustomerEditComponent],
     });
     fixture = TestBed.createComponent(CustomerEditComponent);
     component = fixture.componentInstance;

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "customerList": {
+    "projeto-ada-1004-exercicio": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/customer-list",
+            "outputPath": "dist/projeto-ada-1004-exercicio",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -22,7 +22,8 @@
             "styles": [
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/bootstrap-icons/font/bootstrap-icons.css"
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": ["node_modules/bootstrap/dist/js/bootstrap.js"]
           },
@@ -57,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "customerList:build:production"
+              "browserTarget": "projeto-ada-1004-exercicio:build:production"
             },
             "development": {
-              "browserTarget": "customerList:build:development"
+              "browserTarget": "projeto-ada-1004-exercicio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "customerList:build"
+            "browserTarget": "projeto-ada-1004-exercicio:build"
           }
         },
         "test": {
@@ -85,6 +86,6 @@
     }
   },
   "cli": {
-    "analytics": "cd1f78f6-4d2c-4a49-a54d-1000a48a13f0"
+    "analytics": "2ab66dd2-20d9-4ae0-b629-d5c24dcf086b"
   }
 }

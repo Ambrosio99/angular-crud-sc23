@@ -59,3 +59,24 @@ nav a {
 .btn.active {
   background-color: #0d6efd;
 }
+
+@media (max-width: 600px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
+
+  img {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+
+  form {
+    max-width: 300px;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+}

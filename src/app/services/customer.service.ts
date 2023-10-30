@@ -11,18 +11,18 @@ export class CustomerService {
   constructor(private http: HttpClient) {
     const customer: Customer = {
       id: self.crypto.randomUUID(),
-      name: 'Carlos',
-      email: 'carlos@carlos.com',
-      dateOfBirth: new Date('1984-06-18'),
+      name: 'Lucas Ambrosio',
+      email: 'ambrosio@ada.com',
+      dateOfBirth: new Date('1999-06-10'),
     };
 
     this.customers.push(customer);
 
     const customer2: Customer = {
       id: self.crypto.randomUUID(),
-      name: 'Bete',
-      email: 'bete@bete.com',
-      dateOfBirth: new Date('1984-06-30'),
+      name: 'Carlao ADA',
+      email: 'carlao@ada.com',
+      dateOfBirth: new Date('1984-06-18'),
     };
 
     this.customers.push(customer2);

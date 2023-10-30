@@ -13,6 +13,7 @@ import { CustomerListComponent } from './pages/customer-list/customer-list.compo
 import { CustomerEditComponent } from './pages/customer-edit/customer-edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeLoginComponent } from './pages/home-login/home-login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HomeLoginComponent } from './pages/home-login/home-login.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

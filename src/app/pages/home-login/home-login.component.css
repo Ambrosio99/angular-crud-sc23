@@ -4,6 +4,7 @@ main {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: rgb(240, 240, 240);
 }
 
 h1 {
@@ -15,11 +16,11 @@ form {
   gap: 12px;
   max-width: 600px;
   place-self: center;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(255, 255, 255);
   padding: 30px 40px;
   border-radius: 8px;
   box-sizing: border-box;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 0 10px rgba(85, 85, 85, 0.16);
 
   & button {
     max-width: 300px;

@@ -21,7 +21,7 @@
         <th>Id</th>
         <th>Nome</th>
         <th>Data de Nascimento</th>
-        <th>Email</th>
+        <th class="d-none d-sm-table-cell">Email</th>
         <th>Ações</th>
       </thead>
 
@@ -30,7 +30,7 @@
           <td>{{customer.id}}</td>
           <td>{{customer.name}}</td>
           <td>{{customer.dateOfBirth | date: "dd/MM/yyyy" : 'UTC' }}</td>
-          <td>{{customer.email}}</td>
+          <td class="d-none d-sm-table-cell">{{customer.email}}</td>
           <td>
             <button class="btn btn-secondary me-1" (click)="goToCustomerEdit(customer.id)"><i class="bi bi-pencil-square"></i></button>
             <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#customerModal" (click)="openModalConfirmDelete(customer.id)"><i class="bi bi-trash"></i></button>

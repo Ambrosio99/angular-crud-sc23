@@ -17,23 +17,30 @@ Um CRUD é uma abreviação para operações básicas de banco de dados: Create 
 
 ### Clonando o Repositório
 
-bash
+```bash
 git clone https://github.com/Ambrosio99/angular-crud-sc23
-cd crud-santandercoders-angular
+cd angular-crud-sc23
+```
 
 Instalando Dependências
-bash
+
+```bash
 npm install
+```
 
 Rodando o Projeto
-bash
+
+```bash
 ng serve
 Acesse a aplicação no seu navegador em http://localhost:4200.
+```
 
 Credenciais de Acesso
-bash
+
+```bash
 Usuário: admin
 Senha: admin
+```
 
 Contribuindo
 Se deseja contribuir, sinta-se à vontade para abrir uma issue ou enviar um pull request.
